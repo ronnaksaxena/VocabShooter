@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TextMeshProUGUI; //package not showing up, need assembly reference?
+//using TextMeshProUGUI; //package not showing up, need assembly reference?
 //https://stackoverflow.com/questions/61102508/tmpro-not-found-in-visual-studio-code
 
 using TMPro;
@@ -20,6 +20,7 @@ public class gameLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        e3Text = GetComponent<TextMeshProUGUI>();
 
     }
 

@@ -2,23 +2,12 @@
   <MonoDevelop.Ide.ItemProperties.fps.AI PreferredExecutionTarget="8041762c-82a7-4e31-9bce-48f3fed8a7ee" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FPS/Scripts/AI/gameLogic.cs">
     <Files>
-      <File FileName="Assets/FPS/Scripts/AI/gameLogic.cs" Line="27" Column="10" />
-      <File FileName="Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TextMeshProUGUI.cs" />
+      <File FileName="Assets/FPS/Scripts/AI/gameLogic.cs" Line="19" Column="32" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="VocabGame" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="FPS" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="AI" expanded="True">
-                    <Node name="gameLogic.cs" selected="True" />
-                  </Node>
-                </Node>
-              </Node>
-            </Node>
-          </Node>
+          <Node name="VocabGame" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>

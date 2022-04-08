@@ -293,7 +293,7 @@ MonoBehaviour:
   Boss: {fileID: 0}
   e1Text: {fileID: 1863050002}
   e2Text: {fileID: 1353384480}
-  e3Text: {fileID: 1566405690}
+  e3Text: {fileID: 1566405692}
   BossText: {fileID: 0}
 --- !u!1 &189289583
 GameObject:
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 196527673}
   - component: {fileID: 196527672}
   m_Layer: 0
-  m_Name: e4Canvas
+  m_Name: e3Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3499,7 +3499,7 @@ GameObject:
   - component: {fileID: 1566405693}
   - component: {fileID: 1566405692}
   m_Layer: 0
-  m_Name: e4Text
+  m_Name: e3Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
