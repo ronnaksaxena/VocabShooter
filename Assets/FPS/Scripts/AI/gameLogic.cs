@@ -2,35 +2,55 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//using TextMeshProUGUI; //package not showing up, need assembly reference?
-//https://stackoverflow.com/questions/61102508/tmpro-not-found-in-visual-studio-code
-
 using TMPro;
-
-public class gameLogic : MonoBehaviour
+namespace Unity.FPS.AI
 {
-    public GameObject enemy1;
-    public GameObject enemy2;
-    public GameObject enemy3;
-    public GameObject Boss;
-    public GameObject e1Text;
-    public GameObject e2Text;
-    public TextMeshProUGUI e3Text;
-    public GameObject BossText;
-    // Start is called before the first frame update
-    void Start()
+    public class gameLogic : MonoBehaviour
     {
-        e3Text = GetComponent<TextMeshProUGUI>();
+        
+        //enemy objects
+        public GameObject enemy1;
+        public GameObject enemy2;
+        public GameObject enemy3;
+        public GameObject Boss;
+        //texts above the enemies
+        public TextMeshProUGUI e1Text;
+        public TextMeshProUGUI e2Text;
+        public TextMeshProUGUI e3Text;
 
-    }
+        public TextMeshProUGUI BossText;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (enemy2 == null)
-            e3Text.text = "Gargantuan";
+        //variables from other classes
+        public GameObject GameManager;
+        private EnemyManager enemyManager;
+        private EnemyController e2Controller;
+
+        
+
+        
+
+        // Start is called before the first frame update
+        void Start()
         {
+            enemyManager = GameManager.GetComponent<EnemyManager>();
+            e2Controller = enemy2.GetComponent<EnemyController>();
+
+
+
         }
 
+        // Update is called once per frame
+        void Update()
+        {
+
+            if (!enemyManager.Enemies.Contains(e2Controller))
+            {
+                Debug.Log("got here");
+                e3Text.SetText("Gargantuan");
+            }
+
+        }
     }
 }
+
+

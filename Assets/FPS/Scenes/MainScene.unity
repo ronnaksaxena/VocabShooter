@@ -290,11 +290,12 @@ MonoBehaviour:
   enemy1: {fileID: 949435521}
   enemy2: {fileID: 769723754}
   enemy3: {fileID: 681367398}
-  Boss: {fileID: 0}
-  e1Text: {fileID: 1863050002}
-  e2Text: {fileID: 1353384480}
+  Boss: {fileID: 427297083}
+  e1Text: {fileID: 1863050004}
+  e2Text: {fileID: 1353384482}
   e3Text: {fileID: 1566405692}
-  BossText: {fileID: 0}
+  BossText: {fileID: 2070718344}
+  GameManager: {fileID: 355858099}
 --- !u!1 &189289583
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +964,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 335940280}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &355858099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1315839542190839943, guid: c996b53e9f849234393d1e90f68d1679,
+    type: 3}
+  m_PrefabInstance: {fileID: 4008933581619590512}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &371980512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,6 +1018,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2320371260222401683, guid: 1357d534d67e44349a4b7c67840165c7,
     type: 3}
   m_PrefabInstance: {fileID: 2729281213124354947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &427297083 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2015434656898269652, guid: e29d43f43cc5d82499dd9926e01847d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1241647253}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &466201831
 PrefabInstance:
@@ -1234,7 +1247,7 @@ PrefabInstance:
     - target: {fileID: 2015434656898269652, guid: 25a1b0efadb966e44889fce712c8ff8d,
         type: 3}
       propertyPath: m_Name
-      value: Enemy_HoverBot
+      value: e3
       objectReference: {fileID: 0}
     - target: {fileID: 2015434656898269656, guid: 25a1b0efadb966e44889fce712c8ff8d,
         type: 3}
@@ -1340,6 +1353,7 @@ MonoBehaviour:
   e2Text: {fileID: 0}
   e3Text: {fileID: 0}
   BossText: {fileID: 0}
+  GameManager: {fileID: 0}
 --- !u!1001 &685329914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1355,7 +1369,7 @@ PrefabInstance:
     - target: {fileID: 2015434656898269652, guid: 25a1b0efadb966e44889fce712c8ff8d,
         type: 3}
       propertyPath: m_Name
-      value: Enemy_HoverBot
+      value: e1
       objectReference: {fileID: 0}
     - target: {fileID: 2015434656898269656, guid: 25a1b0efadb966e44889fce712c8ff8d,
         type: 3}
@@ -1456,7 +1470,7 @@ PrefabInstance:
     - target: {fileID: 2015434656898269652, guid: 25a1b0efadb966e44889fce712c8ff8d,
         type: 3}
       propertyPath: m_Name
-      value: Enemy_HoverBot
+      value: e2
       objectReference: {fileID: 0}
     - target: {fileID: 2015434656898269656, guid: 25a1b0efadb966e44889fce712c8ff8d,
         type: 3}
@@ -1562,6 +1576,7 @@ MonoBehaviour:
   e2Text: {fileID: 0}
   e3Text: {fileID: 0}
   BossText: {fileID: 0}
+  GameManager: {fileID: 0}
 --- !u!1001 &775364807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1989,6 +2004,7 @@ MonoBehaviour:
   e2Text: {fileID: 0}
   e3Text: {fileID: 0}
   BossText: {fileID: 0}
+  GameManager: {fileID: 0}
 --- !u!1001 &974087171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2595,7 +2611,7 @@ PrefabInstance:
     - target: {fileID: 2015434656898269652, guid: e29d43f43cc5d82499dd9926e01847d3,
         type: 3}
       propertyPath: m_Name
-      value: Enemy_Turret
+      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 2015434656898269656, guid: e29d43f43cc5d82499dd9926e01847d3,
         type: 3}
@@ -8017,7 +8033,17 @@ PrefabInstance:
     - target: {fileID: 598277302063295019, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
       propertyPath: Description
-      value: Only shoot when a synonym for big appears
+      value: Shoot the words that mean big!
+      objectReference: {fileID: 0}
+    - target: {fileID: 598277302063295019, guid: 012d63212fd1fe646b661cb8446c7bd4,
+        type: 3}
+      propertyPath: DelayVisible
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 598277302063295019, guid: 012d63212fd1fe646b661cb8446c7bd4,
+        type: 3}
+      propertyPath: KillsToCompleteObjective
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295029, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
