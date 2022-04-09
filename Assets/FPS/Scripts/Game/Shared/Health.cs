@@ -9,13 +9,14 @@ namespace Unity.FPS.Game
 
         [Tooltip("Health ratio at which the critical health vignette starts appearing")]
         public float CriticalHealthRatio = 0.3f;
+        public bool Invincible = true; //changed
 
         public UnityAction<float, GameObject> OnDamaged;
         public UnityAction<float> OnHealed;
         public UnityAction OnDie;
 
         public float CurrentHealth { get; set; }
-        public bool Invincible { get; set; }
+        
         public bool CanPickup() => CurrentHealth < MaxHealth;
 
         public float GetRatio() => CurrentHealth / MaxHealth;
@@ -45,7 +46,11 @@ namespace Unity.FPS.Game
         public void TakeDamage(float damage, GameObject damageSource)
         {
             if (Invincible)
+            {
+                OnDamaged?.Invoke(0, damageSource);
                 return;
+            }
+                
 
             float healthBefore = CurrentHealth;
             CurrentHealth -= damage;

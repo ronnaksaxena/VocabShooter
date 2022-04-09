@@ -19,7 +19,8 @@ namespace Unity.FPS.Game
             WeaponChargeLoop,
             HUDVictory,
             HUDObjective,
-            EnemyAttack
+            EnemyAttack,
+            ErrorTick
         }
 
         public static void CreateSFX(AudioClip clip, Vector3 position, AudioGroups audioGroup, float spatialBlend,

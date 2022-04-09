@@ -9,6 +9,10 @@ namespace Unity.FPS.AI
     [RequireComponent(typeof(Health), typeof(Actor), typeof(NavMeshAgent))]
     public class EnemyController : MonoBehaviour
     {
+        //flag to check if enemy displays a shootable word
+        //get invincibility status from Health class
+        private Health Health;
+
         [System.Serializable]
         public struct RendererIndexData
         {
@@ -63,6 +67,10 @@ namespace Unity.FPS.AI
         [Header("Sounds")] [Tooltip("Sound played when recieving damages")]
         public AudioClip DamageTick;
 
+        [Header("wrongSFX")] [Tooltip("SFX if enemy is not shootable")]
+        public AudioClip ErrorTick;
+
+
         [Header("VFX")] [Tooltip("The VFX prefab spawned when the enemy dies")]
         public GameObject DeathVfx;
 
@@ -112,6 +120,7 @@ namespace Unity.FPS.AI
         Collider[] m_SelfColliders;
         GameFlowManager m_GameFlowManager;
         bool m_WasDamagedThisFrame;
+        bool m_NotDamagedThisFrame; //copy for invincible code
         float m_LastTimeWeaponSwapped = Mathf.NegativeInfinity;
         int m_CurrentWeaponIndex;
         WeaponController m_CurrentWeapon;
@@ -120,6 +129,10 @@ namespace Unity.FPS.AI
 
         void Start()
         {
+            //added vars:
+            Health = GetComponent<Health>();
+
+            // -----------------------------------------------
             m_EnemyManager = FindObjectOfType<EnemyManager>();
             DebugUtility.HandleErrorIfNullFindObject<EnemyManager, EnemyController>(m_EnemyManager, this);
 
@@ -200,6 +213,11 @@ namespace Unity.FPS.AI
             }
         }
 
+        public void setInvincible (bool x)
+        {
+            Health.Invincible = x;
+        }
+
         void Update()
         {
             EnsureIsWithinLevelBounds();
@@ -214,6 +232,7 @@ namespace Unity.FPS.AI
             }
 
             m_WasDamagedThisFrame = false;
+            m_NotDamagedThisFrame = false;
         }
 
         void EnsureIsWithinLevelBounds()
@@ -343,17 +362,33 @@ namespace Unity.FPS.AI
             // test if the damage source is the player
             if (damageSource && !damageSource.GetComponent<EnemyController>())
             {
-                // pursue the player
-                DetectionModule.OnDamaged(damageSource);
+                //takes damage and plays sound if correct word
+                //the enemy displays correct word -> not invincible
+                if (!Health.Invincible)
+                {
+                    // pursue the player
+                    DetectionModule.OnDamaged(damageSource);
+
+                    onDamaged?.Invoke();
+                    m_LastTimeDamaged = Time.time;
+
+                    // play the damage tick sound
+                    if (DamageTick && !m_WasDamagedThisFrame)
+                        AudioUtility.CreateSFX(DamageTick, transform.position, AudioUtility.AudioGroups.DamageTick, 0f);
+
+                    m_WasDamagedThisFrame = true;
+                }
+                else { //is not correct word, need to play error sound
+                    // pursue the player
+                    DetectionModule.OnDamaged(damageSource);
+
+                    // play the error tick sound
+                    if (ErrorTick && !m_NotDamagedThisFrame)
+                        AudioUtility.CreateSFX(ErrorTick, transform.position, AudioUtility.AudioGroups.ErrorTick, 0f);
+
+                    m_NotDamagedThisFrame = true;
+                }
                 
-                onDamaged?.Invoke();
-                m_LastTimeDamaged = Time.time;
-            
-                // play the damage tick sound
-                if (DamageTick && !m_WasDamagedThisFrame)
-                    AudioUtility.CreateSFX(DamageTick, transform.position, AudioUtility.AudioGroups.DamageTick, 0f);
-            
-                m_WasDamagedThisFrame = true;
             }
         }
 
