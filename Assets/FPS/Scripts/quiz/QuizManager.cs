@@ -11,6 +11,7 @@ public class QuizManager : MonoBehaviour
     public int numCorrect = 0;
 
     public Text questionText;
+    public Text correctText;
 
     private void Start()
     {
@@ -46,12 +47,24 @@ public class QuizManager : MonoBehaviour
 
     private void generateQuestion()
     {
+        //update score
+        correctText.text = $"Correct Answers: {numCorrect}/10";
         //new question
         currentQuestion += 1;
 
-        //set text and answer options for current question
-        questionText.text = QnA[currentQuestion].question;
-        setAnswers();
+        if (currentQuestion < QnA.Count)
+        {
+            //set text and answer options for current question
+            questionText.text = QnA[currentQuestion].question;
+            setAnswers();
+        }
+        else
+        {
+            Debug.Log("reached end of quiz");
+            //advance to next scene
+        }
+
+        
 
         
 
