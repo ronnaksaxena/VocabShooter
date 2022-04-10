@@ -2713,6 +2713,11 @@ PrefabInstance:
       propertyPath: MaxHealth
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 6370966072896210225, guid: e29d43f43cc5d82499dd9926e01847d3,
+        type: 3}
+      propertyPath: Invincible
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9087143436424816424, guid: e29d43f43cc5d82499dd9926e01847d3,
         type: 3}
       propertyPath: ErrorTick

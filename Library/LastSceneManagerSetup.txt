@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/FPS/Scenes/MainScene.unity
+- path: Assets/FPS/Scenes/Quiz.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
