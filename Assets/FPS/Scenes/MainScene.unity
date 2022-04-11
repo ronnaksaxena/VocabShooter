@@ -1343,27 +1343,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 681367396}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &681367399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 681367398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8ed2c62d99914fb38441f90ce1b6fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy1: {fileID: 0}
-  enemy2: {fileID: 0}
-  enemy3: {fileID: 0}
-  Boss: {fileID: 0}
-  e1Text: {fileID: 0}
-  e2Text: {fileID: 0}
-  e3Text: {fileID: 0}
-  BossText: {fileID: 0}
-  GameManager: {fileID: 0}
 --- !u!1001 &685329914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1586,27 +1565,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 769723752}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &769723755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769723754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8ed2c62d99914fb38441f90ce1b6fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy1: {fileID: 0}
-  enemy2: {fileID: 0}
-  enemy3: {fileID: 0}
-  Boss: {fileID: 0}
-  e1Text: {fileID: 0}
-  e2Text: {fileID: 0}
-  e3Text: {fileID: 0}
-  BossText: {fileID: 0}
-  GameManager: {fileID: 0}
 --- !u!1001 &775364807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2014,27 +1972,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 685329914}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &949435530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 949435521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8ed2c62d99914fb38441f90ce1b6fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy1: {fileID: 0}
-  enemy2: {fileID: 0}
-  enemy3: {fileID: 0}
-  Boss: {fileID: 0}
-  e1Text: {fileID: 0}
-  e2Text: {fileID: 0}
-  e3Text: {fileID: 0}
-  BossText: {fileID: 0}
-  GameManager: {fileID: 0}
 --- !u!1001 &974087171
 PrefabInstance:
   m_ObjectHideFlags: 0

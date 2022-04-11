@@ -47,7 +47,7 @@ namespace Unity.FPS.Game
         {
             if (Invincible)
             {
-                OnDamaged?.Invoke(0, damageSource);
+                OnDamaged(0f, damageSource);
                 return;
             }
                 
@@ -87,6 +87,10 @@ namespace Unity.FPS.Game
                 m_IsDead = true;
                 OnDie?.Invoke();
             }
+        }
+        public void setInvincible(bool x)
+        {
+            Invincible = x;
         }
     }
 }

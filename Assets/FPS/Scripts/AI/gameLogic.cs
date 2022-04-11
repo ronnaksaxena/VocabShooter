@@ -29,14 +29,17 @@ namespace Unity.FPS.AI
         private EnemyManager enemyManager;
         private EnemyController e2Controller;
         private EnemyController e3Controller;
+        private Health enemy3Health;
         private EnemyController bossController;
         private Health bossHealth;
+
 
         //word bank for boss fight
         string[] wrongWords = { "Miniscule", "Diminutive", "Frugal", "Brief", "Serendipitous"};
         string[] correctWords = { "Vast", "Colossol", "Immense", "Massive", "Behemothic" };
+
         //want the Boss' words to change every 5 seconds
-        private Timer timer1;
+        float timePassed = 0f;
 
 
 
@@ -50,14 +53,7 @@ namespace Unity.FPS.AI
             e3Controller = enemy3.GetComponent<EnemyController>();
             bossController = Boss.GetComponent<EnemyController>();
             bossHealth = Boss.GetComponent<Health>();
-
-            timer1 = new Timer(); //new Timer(1000);
-            timer1.Elapsed += (sender, e) =>
-            {
-                updateBoss();
-            };
-            timer1.Interval = 5000;//miliseconds
-            timer1.Start();
+            enemy3Health = enemy3.GetComponent<Health>();
 
 
         }
@@ -69,13 +65,16 @@ namespace Unity.FPS.AI
             //when enemy2 dies, enemy3 becomes shootable
             if (!enemyManager.Enemies.Contains(e2Controller))
             {
-                e3Controller.setInvincible(false);
+                enemy3Health.setInvincible(false);
                 e3Text.SetText("Gargantuan");
             }
-            //stops timer when Boss dies
-            if (!enemyManager.Enemies.Contains(bossController))
+
+            //updates boss every 5 seconds
+            timePassed += Time.deltaTime;
+            if (timePassed > 5f)
             {
-                timer1.Stop();
+                updateBoss();
+                timePassed = 0f;
             }
 
         }
@@ -83,16 +82,14 @@ namespace Unity.FPS.AI
         //function to switch boss states
         public void updateBoss()
         {
-            Debug.Log("called update boss");
-            Debug.Log(bossHealth.Invincible);
+            
             //switch from incorrect word to correct word
             if (bossHealth.Invincible)
             {
                 System.Random random = new System.Random();
                 int i = random.Next(0, correctWords.Length);
                 BossText.SetText(correctWords[i]);
-                Debug.Log(correctWords[i]);
-                bossController.setInvincible(false);
+                bossHealth.setInvincible(false);
 
             }
             else //switch from correct word to incorrect word
@@ -100,8 +97,7 @@ namespace Unity.FPS.AI
                 System.Random random = new System.Random();
                 int i = random.Next(0, wrongWords.Length);
                 BossText.SetText(wrongWords[i]);
-                bossController.setInvincible(true);
-                Debug.Log(wrongWords[i]);
+                bossHealth.setInvincible(true);
             }
         }
 

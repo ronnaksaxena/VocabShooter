@@ -213,10 +213,7 @@ namespace Unity.FPS.AI
             }
         }
 
-        public void setInvincible (bool x)
-        {
-            Health.Invincible = x;
-        }
+        
 
         void Update()
         {
@@ -384,7 +381,7 @@ namespace Unity.FPS.AI
 
                     // play the error tick sound
                     if (ErrorTick && !m_NotDamagedThisFrame)
-                        AudioUtility.CreateSFX(ErrorTick, transform.position, AudioUtility.AudioGroups.ErrorTick, 0f);
+                        AudioUtility.CreateSFX(ErrorTick, transform.position, AudioUtility.AudioGroups.DamageTick, 0f);
 
                     m_NotDamagedThisFrame = true;
                 }

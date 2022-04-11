@@ -1,17 +1,16 @@
 ﻿<Properties StartupConfiguration="{F43E31F3-237A-B022-0CA0-158EE7876670}|">
   <MonoDevelop.Ide.ItemProperties.fps.AI PreferredExecutionTarget="8041762c-82a7-4e31-9bce-48f3fed8a7ee" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AnswerScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FPS/Scripts/AI/PatrolPath.cs">
     <Files>
-      <File FileName="Assets/FPS/Scripts/AI/gameLogic.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/AI/EnemyManager.cs" />
-      <File FileName="Assets/FPS/Scripts/AI/EnemyController.cs" />
-      <File FileName="Assets/FPS/Scripts/AI/EnemyTurret.cs" />
-      <File FileName="Assets/FPS/Scripts/Game/AudioUtility.cs" />
-      <File FileName="Assets/FPS/Scripts/Game/Shared/Health.cs" Line="28" Column="10" />
-      <File FileName="Assets/FPS/Scripts/Game/Managers/AudioManager.cs" />
-      <File FileName="Assets/QuizManager.cs" Line="22" Column="106" />
-      <File FileName="Assets/QuestionAnswers.cs" Line="8" Column="2" />
-      <File FileName="Assets/AnswerScript.cs" Line="7" Column="5" />
+      <File FileName="Assets/FPS/Scripts/AI/gameLogic.cs" Line="85" Column="13" />
+      <File FileName="Assets/FPS/Scripts/AI/EnemyManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/FPS/Scripts/AI/EnemyController.cs" Line="151" Column="67" />
+      <File FileName="Assets/FPS/Scripts/AI/EnemyTurret.cs" Line="1" Column="1" />
+      <File FileName="Assets/FPS/Scripts/Game/AudioUtility.cs" Line="36" Column="1" />
+      <File FileName="Assets/FPS/Scripts/Game/Shared/Health.cs" Line="50" Column="45" />
+      <File FileName="Assets/FPS/Scripts/Game/Managers/AudioManager.cs" Line="6" Column="18" />
+      <File FileName="Assets/FPS/Scripts/Gameplay/ProjectileStandard.cs" Line="193" Column="1" />
+      <File FileName="Assets/FPS/Scripts/AI/PatrolPath.cs" Line="16" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,14 +19,17 @@
             <Node name="Assets" expanded="True">
               <Node name="FPS" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="AI" expanded="True" />
+                  <Node name="AI" expanded="True">
+                    <Node name="PatrolPath.cs" selected="True" />
+                  </Node>
                   <Node name="Game" expanded="True">
                     <Node name="Managers" expanded="True" />
                     <Node name="Shared" expanded="True" />
                   </Node>
+                  <Node name="Gameplay" expanded="True" />
+                  <Node name="quiz" expanded="True" />
                 </Node>
               </Node>
-              <Node name="AnswerScript.cs" selected="True" />
             </Node>
           </Node>
         </State>
