@@ -1,2 +1,2 @@
 # Starting compiling fps.AI.dll
-/Applications/Unity/Hub/Editor/2020.3.31f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-57f594af23d5843e3b5efadaf7fe16b3
+/Applications/Unity/Hub/Editor/2020.3.31f1/Unity.app/Contents/Tools/RoslynScripts/unity_csc.sh /noconfig @Temp/UnityTempFile-79ad5b8f58d504022b5c1097ed73e598

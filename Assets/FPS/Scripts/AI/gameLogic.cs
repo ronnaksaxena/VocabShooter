@@ -28,9 +28,7 @@ namespace Unity.FPS.AI
         public GameObject GameManager;
         private EnemyManager enemyManager;
         private EnemyController e2Controller;
-        private EnemyController e3Controller;
-        private Health enemy3Health;
-        private EnemyController bossController;
+        private Health e3Health;
         private Health bossHealth;
 
 
@@ -50,10 +48,8 @@ namespace Unity.FPS.AI
         {
             enemyManager = GameManager.GetComponent<EnemyManager>();
             e2Controller = enemy2.GetComponent<EnemyController>();
-            e3Controller = enemy3.GetComponent<EnemyController>();
-            bossController = Boss.GetComponent<EnemyController>();
             bossHealth = Boss.GetComponent<Health>();
-            enemy3Health = enemy3.GetComponent<Health>();
+            e3Health = enemy3.GetComponent<Health>();
 
 
         }
@@ -65,7 +61,7 @@ namespace Unity.FPS.AI
             //when enemy2 dies, enemy3 becomes shootable
             if (!enemyManager.Enemies.Contains(e2Controller))
             {
-                enemy3Health.setInvincible(false);
+                e3Health.setInvincible(false);
                 e3Text.SetText("Gargantuan");
             }
 
