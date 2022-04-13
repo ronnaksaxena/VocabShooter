@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Unity.FPS.Game;
 using UnityEngine;
 using UnityEngine.AI;
@@ -127,10 +128,18 @@ namespace Unity.FPS.AI
         WeaponController[] m_Weapons;
         NavigationModule m_NavigationModule;
 
+        //for knockback
+        public Rigidbody rb;
+        public float knockBackAmt;
+        public bool wasKnocked = false;
+        public Vector3 knockPosition;
+
         void Start()
         {
             //added vars:
             Health = GetComponent<Health>();
+            rb = GetComponent<Rigidbody>();
+            knockPosition = transform.position;
 
             // -----------------------------------------------
             m_EnemyManager = FindObjectOfType<EnemyManager>();
@@ -230,6 +239,21 @@ namespace Unity.FPS.AI
 
             m_WasDamagedThisFrame = false;
             m_NotDamagedThisFrame = false;
+            if (name == "e1")
+            {
+                Debug.Log("Velocity is:" + rb.velocity);
+                Debug.Log("Enemy position is:" + transform.position);
+            }
+            //reached knock back distance so can reset velocity
+            if (wasKnocked && (findDistance(transform.position,knockPosition) >= knockBackAmt))
+            {
+                rb.velocity = new Vector3(0, 0, 0);
+                wasKnocked = false;
+                Debug.Log("Reached knock back distance" + knockPosition + "" + transform.position);
+            }
+            
+            
+
         }
 
         void EnsureIsWithinLevelBounds()
@@ -363,6 +387,7 @@ namespace Unity.FPS.AI
                 //the enemy displays correct word -> not invincible
                 if (!Health.Invincible)
                 {
+                    
                     // pursue the player
                     DetectionModule.OnDamaged(damageSource);
 
@@ -374,6 +399,9 @@ namespace Unity.FPS.AI
                         AudioUtility.CreateSFX(DamageTick, transform.position, AudioUtility.AudioGroups.DamageTick, 0f);
 
                     m_WasDamagedThisFrame = true;
+
+                    Debug.Log("knock back called in OnDamaged");
+                    knockBack(knockBackAmt, damageSource); //try knockback
                 }
                 else { //is not correct word, need to play error sound
                     // pursue the player
@@ -470,7 +498,7 @@ namespace Unity.FPS.AI
             else if (DropRate == 1)
                 return true;
             else
-                return (Random.value <= DropRate);
+                return true;
         }
 
         void FindAndInitializeAllWeapons()
@@ -518,5 +546,56 @@ namespace Unity.FPS.AI
                 m_LastTimeWeaponSwapped = Mathf.NegativeInfinity;
             }
         }
+        void knockBack(float amt, GameObject player)
+        {
+            if (rb != null)
+            {
+                Debug.Log("found rb");
+                Vector3 direction = transform.position - player.transform.position;
+                direction.y = 0;
+
+                //rb.AddForce(direction.normalized * amt, ForceMode.Impulse);
+                Debug.Log("added force");
+                addforce(direction);
+
+            }
+            else
+            {
+                Debug.Log("failed");
+            }
+        }
+
+        //own implementation of addforce method
+        // F = M * A
+        // D = 0.5A * T^2
+        // Thereforce since bullet is 1 kg and enemy is 1 kg, should knock back
+        // the enemy by "amt" after contact
+        void addforce(Vector3 direction)
+        {
+            wasKnocked = true;
+            //position at start of contacct
+            knockPosition = transform.position;
+
+            //will have enemy travel in that direction until they reach distance
+            rb.velocity = direction;
+            
+        }
+
+        // used distance formula to find distance between vectors
+        float findDistance(Vector3 v1, Vector3 v2)
+        {
+            Vector3 difference = new Vector3(
+              v1.x - v2.x,
+              v1.y - v2.y,
+              v1.z - v2.z);
+
+            float distance = (float)Math.Sqrt(
+              Math.Pow(difference.x, 2f) +
+              Math.Pow(difference.y, 2f) +
+              Math.Pow(difference.z, 2f));
+
+            return distance;
+        }
+
     }
 }
