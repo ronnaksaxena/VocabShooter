@@ -554,6 +554,7 @@ namespace Unity.FPS.AI
                 Vector3 direction = transform.position - player.transform.position;
                 direction.y = 0;
 
+                //Unity engines Rigidbody.AddForce() :
                 //rb.AddForce(direction.normalized * amt, ForceMode.Impulse);
                 Debug.Log("added force");
                 addforce(direction);
