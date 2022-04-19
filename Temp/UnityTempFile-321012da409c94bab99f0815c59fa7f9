@@ -335,6 +335,7 @@
 /define:UNITY_STANDALONE_OSX
 /define:UNITY_TEAM_LICENSE
 /define:USE_SEARCH_ENGINE_API
+"Assets/FPS/Scripts/CoLearner/WordBotGun.cs"
 "Assets/FPS/Scripts/quiz/AnswerScript.cs"
 "Assets/FPS/Scripts/quiz/QuestionAnswers.cs"
 "Assets/FPS/Scripts/quiz/QuizManager.cs"
@@ -372,4 +373,3 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexShakeB.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
-"Assets/WordBotGun.cs"
