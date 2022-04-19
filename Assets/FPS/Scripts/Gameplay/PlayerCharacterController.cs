@@ -214,7 +214,6 @@ namespace Unity.FPS.Gameplay
             UpdateCharacterHeight(false);
 
             HandleCharacterMovement();
-            Debug.Log("Player position is:" + transform.position); //DELETE LATER!!
         }
 
         void OnDie()

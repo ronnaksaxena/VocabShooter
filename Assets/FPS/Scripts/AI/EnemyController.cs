@@ -239,17 +239,12 @@ namespace Unity.FPS.AI
 
             m_WasDamagedThisFrame = false;
             m_NotDamagedThisFrame = false;
-            if (name == "e1")
-            {
-                Debug.Log("Velocity is:" + rb.velocity);
-                Debug.Log("Enemy position is:" + transform.position);
-            }
+
             //reached knock back distance so can reset velocity
             if (wasKnocked && (findDistance(transform.position,knockPosition) >= knockBackAmt))
             {
                 rb.velocity = new Vector3(0, 0, 0);
                 wasKnocked = false;
-                Debug.Log("Reached knock back distance" + knockPosition + "" + transform.position);
             }
             
             
@@ -400,8 +395,7 @@ namespace Unity.FPS.AI
 
                     m_WasDamagedThisFrame = true;
 
-                    Debug.Log("knock back called in OnDamaged");
-                    knockBack(knockBackAmt, damageSource); //try knockback
+                    knockBack(damageSource); //try knockback
                 }
                 else { //is not correct word, need to play error sound
                     // pursue the player
@@ -546,23 +540,21 @@ namespace Unity.FPS.AI
                 m_LastTimeWeaponSwapped = Mathf.NegativeInfinity;
             }
         }
-        void knockBack(float amt, GameObject player)
+        void knockBack(GameObject player)
         {
             if (rb != null)
             {
-                Debug.Log("found rb");
                 Vector3 direction = transform.position - player.transform.position;
                 direction.y = 0;
 
                 //Unity engines Rigidbody.AddForce() :
                 //rb.AddForce(direction.normalized * amt, ForceMode.Impulse);
-                Debug.Log("added force");
                 addforce(direction);
 
             }
             else
             {
-                Debug.Log("failed");
+                Debug.Log("No Rigid body");
             }
         }
 
