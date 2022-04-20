@@ -16,8 +16,6 @@ public class WordBotGun : MonoBehaviour
     public GameObject wordBot;
 
 
-    //DELETE LATER!!!
-    public int hits = 0;
 
     void Start()
     {
@@ -25,7 +23,7 @@ public class WordBotGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("j")) //Change later!!
+        if (Input.GetKey("j")) //escape key to test shooting Change later!!
         {
             Shoot();
         }
@@ -44,16 +42,11 @@ public class WordBotGun : MonoBehaviour
 
         if (Physics.Raycast(transform.position, newForward, out hit, range))
         {
-            Debug.Log("new forward vector:" + newForward);
-            Debug.Log(hit.transform.name);
 
             Health health = hit.transform.GetComponent<Health>();
             if (health != null)
             {
                 health.TakeDamage(damage, wordBot);
-                hits += 1;
-                Debug.Log("hits:" + hits);
-                Debug.Log(health.CurrentHealth);
             }
             else
             {
