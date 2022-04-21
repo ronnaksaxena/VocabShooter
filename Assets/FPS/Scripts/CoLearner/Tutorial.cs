@@ -15,6 +15,10 @@ public class Tutorial : MonoBehaviour
     public GameObject wordBot;
     private animationController animationController;
 
+    //enemies
+    public GameObject enemy0;
+    public GameObject enemy00;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,12 +53,23 @@ public class Tutorial : MonoBehaviour
 
             Debug.Log("tried to rotate!");
             float speed = 50f;
-            while (botAndGun.transform.rotation.y != 300f)
+
+            RaycastHit hit;
+            //transform.right since the robot's red arrow points forward
+            if (Physics.Raycast(botAndGun.transform.position, botAndGun.transform.right, out hit))
             {
-                botAndGun.transform.Rotate(Vector3.up * speed * Time.deltaTime);
-                Debug.Log(botAndGun.transform.rotation);
+                if (hit.transform.name != enemy0.name)
+                {
+                    botAndGun.transform.Rotate(Vector3.up * speed * Time.deltaTime);
+                    Debug.Log(botAndGun.transform.rotation);
+                    Debug.Log(botAndGun.transform.rotation.y);
+                    
+                }
+                else
+                {
+                    Debug.Log("found enemy!!!");
+                }
             }
-            
 
             //playScene2();
         }

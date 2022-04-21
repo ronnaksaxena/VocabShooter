@@ -4839,6 +4839,8 @@ MonoBehaviour:
   dialogue: {fileID: 64982354}
   botAndGun: {fileID: 113558109}
   wordBot: {fileID: 808048104}
+  enemy0: {fileID: 823292485}
+  enemy00: {fileID: 1915424515}
 --- !u!1 &1603278495
 GameObject:
   m_ObjectHideFlags: 0
