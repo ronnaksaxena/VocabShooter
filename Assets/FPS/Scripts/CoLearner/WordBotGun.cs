@@ -31,7 +31,7 @@ public class WordBotGun : MonoBehaviour
     }
 
     //shooting method
-    void Shoot()
+    public void Shoot()
     {
         RaycastHit hit;
 

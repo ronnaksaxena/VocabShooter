@@ -14,6 +14,9 @@ public class Tutorial : MonoBehaviour
     public GameObject botAndGun;
     public GameObject wordBot;
     private animationController animationController;
+    public GameObject botGun;
+    private WordBotGun wbg;
+    float lastShot = 0f;
 
     //enemies
     public GameObject enemy0;
@@ -24,6 +27,7 @@ public class Tutorial : MonoBehaviour
     {
         dialogueManager = dialogue.GetComponent<DialogueManager>();
         animationController = wordBot.GetComponent<animationController>();
+        wbg = botGun.GetComponent<WordBotGun>();
         curScript = dialogueManager.curIdx;
         
     }
@@ -40,13 +44,12 @@ public class Tutorial : MonoBehaviour
         if ((curScript == 0) && (curPlaying != 0))
         {
             curPlaying = 0;
-            playScene0();
         }
         else if ((curScript == 1) && (curPlaying != 1))
         {
             curPlaying = 1;
-            playScene1();
         }
+        //tries shooting enemy0 and fails
         else if ((curScript == 2))
         {
             curPlaying = 2;
@@ -61,63 +64,38 @@ public class Tutorial : MonoBehaviour
                 if (hit.transform.name != enemy0.name)
                 {
                     botAndGun.transform.Rotate(Vector3.up * speed * Time.deltaTime);
-                    Debug.Log(botAndGun.transform.rotation);
-                    Debug.Log(botAndGun.transform.rotation.y);
                     
                 }
-                else
+                else //pointing at the enemy
                 {
                     Debug.Log("found enemy!!!");
+
+                    //shoot that dude
+                    lastShot += Time.deltaTime;
+                    //shoot every second
+                    if (lastShot >= 1f)
+                    {
+                        lastShot = 0f;
+                        wbg.Shoot();
+                        Debug.Log("GOTEEEEM!");
+                    }
                 }
             }
-
-            //playScene2();
         }
         else if ((curScript == 3) && (curPlaying != 3))
         {
             curPlaying = 3;
-            playScene3();
         }
         else if ((curScript == 4) && (curPlaying != 4))
         {
             curPlaying = 4;
-            playScene4();
         }
         else if ((curScript == 5) && (curPlaying != 5))
         {
             curPlaying = 5;
-            playScene5();
         }
 
     }
 
 
-    //all different scenes
-    void playScene0()
-    {
-
-    }
-    void playScene1()
-    {
-
-    }
-    //tries shooting enemy0 and fails
-    void playScene2()
-    {
-        
-        
-
-    }
-    void playScene3()
-    {
-
-    }
-    void playScene4()
-    {
-
-    }
-    void playScene5()
-    {
-
-    }
 }
