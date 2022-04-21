@@ -16,7 +16,8 @@ public class Tutorial : MonoBehaviour
     private animationController animationController;
     public GameObject botGun;
     private WordBotGun wbg;
-    float lastShot = 0f;
+    private float lastShot = 0f;
+    private Rigidbody botRB;
 
     //enemies
     public GameObject enemy0;
@@ -29,6 +30,7 @@ public class Tutorial : MonoBehaviour
         animationController = wordBot.GetComponent<animationController>();
         wbg = botGun.GetComponent<WordBotGun>();
         curScript = dialogueManager.curIdx;
+        botRB = botAndGun.GetComponent<Rigidbody>();
         
     }
 
@@ -55,7 +57,7 @@ public class Tutorial : MonoBehaviour
             curPlaying = 2;
 
             Debug.Log("tried to rotate!");
-            float speed = 50f;
+            float speed = 100f;
 
             RaycastHit hit;
             //transform.right since the robot's red arrow points forward
@@ -82,9 +84,70 @@ public class Tutorial : MonoBehaviour
                 }
             }
         }
-        else if ((curScript == 3) && (curPlaying != 3))
+        //shoots correct enemy00
+        else if (curScript == 3)
         {
-            curPlaying = 3;
+            
+
+            //turn wordBot towards the other enemy
+            Debug.Log("tried to rotate!");
+            float speed = 100f;
+
+            RaycastHit hit;
+            //transform.right since the robot's red arrow points forward
+            if (Physics.Raycast(botAndGun.transform.position, botAndGun.transform.right, out hit))
+            {
+                if (hit.transform.name != enemy00.name)
+                {
+                    botAndGun.transform.Rotate(Vector3.down * speed * Time.deltaTime);
+
+                }
+                else //pointing at the enemy
+                {
+                    Debug.Log("found enemy!!!");
+                    curPlaying = 3;
+
+                    //walk and shoot enemy
+                    float curTime = 0f;
+                    float timeWalking = 2f;
+                    float timeShooting = 2f;
+
+
+
+                    while (curTime < timeWalking)
+                    {
+                        Debug.Log("Started Walking");
+                        curTime += Time.deltaTime;
+                        animationController.startWalking();
+                        //moves bot forward by speed
+                        float walkSpeed = 1f;
+                        botRB.velocity = botAndGun.transform.right * walkSpeed;
+                    }
+                    botRB.velocity = new Vector3(0, 0, 0);
+                    animationController.stopWalking();
+                    curTime = 0f;
+
+                    while (curTime < timeShooting)
+                    {
+                        Debug.Log("started shooting");
+                        curTime += Time.deltaTime;
+                        //shoot that dude
+                        lastShot += Time.deltaTime;
+                        //shoot every second
+                        if (lastShot >= 0.5f)
+                        {
+                            lastShot = 0f;
+                            wbg.Shoot();
+
+                        }
+                    }
+                    Debug.Log("finished walk and shoot");
+
+
+                }
+            }
+
+
         }
         else if ((curScript == 4) && (curPlaying != 4))
         {
@@ -95,6 +158,44 @@ public class Tutorial : MonoBehaviour
             curPlaying = 5;
         }
 
+    }
+
+    void walkAndShoot(float timeWalking, float timeShooting)
+    {
+        float curTime = 0f;
+
+        
+
+        while (curTime < timeWalking)
+        {
+            Debug.Log("Started Walking");
+            curTime += Time.deltaTime;
+            animationController.startWalking();
+            //moves bot forward by speed
+            float speed = 1f;
+            botRB.velocity = botAndGun.transform.right * speed;
+        }
+        botRB.velocity = new Vector3(0, 0, 0);
+        animationController.stopWalking();
+        curTime = 0f;
+
+        while (curTime < timeShooting)
+        {
+            Debug.Log("started shooting");
+            curTime += Time.deltaTime;
+            //shoot that dude
+            lastShot += Time.deltaTime;
+            //shoot every second
+            if (lastShot >= 0.5f)
+            {
+                lastShot = 0f;
+                wbg.Shoot();
+                
+            }
+        }
+        Debug.Log("finished walk and shoot");
+
+        
     }
 
 

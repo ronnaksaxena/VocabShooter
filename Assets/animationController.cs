@@ -18,11 +18,11 @@ public class animationController : MonoBehaviour
 
         
     }
-    void startWalking()
+    public void startWalking()
     {
         animator.SetBool("isWalking", true);
     }
-    void stopWalking()
+    public void stopWalking()
     {
         animator.SetBool("isWalking", false);
     }
