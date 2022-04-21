@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
 
     public Text script;
     public DialogueTrigger dialogueTrigger;
+    public int curIdx = 0;
 
     //to stop user from clicking continue too fast
     float timePassed = 0f;
@@ -24,13 +25,18 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueTrigger = GetComponent<DialogueTrigger>();
         script.text = dialogueTrigger.curText;
+        curIdx = dialogueTrigger.curIdx;
         
     }
 
     private void Update()
     {
+        //update current sentence it is at
+        curIdx = dialogueTrigger.curIdx;
+
+        //goes to next setnece if enough time passed
         timePassed += Time.deltaTime;
-        if (Input.GetKey("x") && (timePassed >= 5f))
+        if (Input.GetKey("x") && (timePassed >= 3f))
         {
             //more sentences left
             if (!dialogueTrigger.isScriptOver())

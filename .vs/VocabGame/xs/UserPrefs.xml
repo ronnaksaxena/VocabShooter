@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{F43E31F3-237A-B022-0CA0-158EE7876670}|">
   <MonoDevelop.Ide.ItemProperties.fps.AI PreferredExecutionTarget="8041762c-82a7-4e31-9bce-48f3fed8a7ee" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FPS/Scripts/CoLearner/DialogueTrigger.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FPS/Scripts/CoLearner/Tutorial.cs">
     <Files>
-      <File FileName="Assets/FPS/Scripts/CoLearner/WordBotGun.cs" Line="49" Column="52" />
+      <File FileName="Assets/FPS/Scripts/CoLearner/WordBotGun.cs" Line="26" Column="9" />
       <File FileName="Assets/FPS/Scripts/Game/Shared/Health.cs" />
       <File FileName="Assets/FPS/Scripts/Gameplay/PlayerCharacterController.cs" />
       <File FileName="Assets/FPS/Scripts/Gameplay/Managers/PlayerWeaponsManager.cs" />
@@ -13,20 +13,20 @@
       <File FileName="Assets/FPS/Scripts/Gameplay/Objectives/ObjectiveKillEnemies.cs" />
       <File FileName="Assets/FPS/Scripts/AI/EnemyMobile.cs" />
       <File FileName="Assets/FPS/Scripts/AI/gameLogic.cs" />
-      <File FileName="Assets/FPS/Scripts/CoLearner/DialogueManager.cs" Line="13" Column="6" />
-      <File FileName="Assets/FPS/Scripts/CoLearner/DialogueTrigger.cs" Line="7" Column="22" />
+      <File FileName="Assets/FPS/Scripts/CoLearner/DialogueManager.cs" />
+      <File FileName="Assets/FPS/Scripts/CoLearner/DialogueTrigger.cs" />
+      <File FileName="Assets/animationController.cs" />
+      <File FileName="Assets/FPS/Scripts/CoLearner/Tutorial.cs" Line="7" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="VocabGame" expanded="True">
-            <Node name="Assets" expanded="True">
+            <Node name="Assets" expanded="True" selected="True">
               <Node name="FPS" expanded="True">
                 <Node name="Scripts" expanded="True">
                   <Node name="AI" expanded="True" />
-                  <Node name="CoLearner" expanded="True">
-                    <Node name="DialogueTrigger.cs" selected="True" />
-                  </Node>
+                  <Node name="CoLearner" expanded="True" />
                   <Node name="Game" expanded="True">
                     <Node name="Managers" expanded="True" />
                     <Node name="Shared" expanded="True" />
@@ -47,7 +47,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d9e63818-e839-42a4-b35a-32cd9ac29c53" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="74553c96-a344-4d27-a8ba-40c7a8d12fc7" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
