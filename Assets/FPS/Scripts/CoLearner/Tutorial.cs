@@ -43,10 +43,20 @@ public class Tutorial : MonoBehaviour
             curPlaying = 1;
             playScene1();
         }
-        else if ((curScript == 2) && (curPlaying != 2))
+        else if ((curScript == 2))
         {
             curPlaying = 2;
-            playScene2();
+
+            Debug.Log("tried to rotate!");
+            float speed = 50f;
+            while (botAndGun.transform.rotation.y != 300f)
+            {
+                botAndGun.transform.Rotate(Vector3.up * speed * Time.deltaTime);
+                Debug.Log(botAndGun.transform.rotation);
+            }
+            
+
+            //playScene2();
         }
         else if ((curScript == 3) && (curPlaying != 3))
         {
@@ -79,10 +89,7 @@ public class Tutorial : MonoBehaviour
     //tries shooting enemy0 and fails
     void playScene2()
     {
-        Debug.Log("tried to rotate!");
-        float speed = 50f;
-        botAndGun.transform.Rotate(Vector3.right * speed * Time.deltaTime);
-        Debug.Log(botAndGun.transform.rotation);
+        
         
 
     }
