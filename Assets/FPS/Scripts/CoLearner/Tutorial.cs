@@ -112,8 +112,8 @@ public class Tutorial : MonoBehaviour
                     float timeWalking = 2f;
                     float timeShooting = 2f;
 
-
-
+                    Debug.Log(curTime);
+                    Debug.Log(timeWalking);
                     while (curTime < timeWalking)
                     {
                         Debug.Log("Started Walking");
@@ -121,12 +121,20 @@ public class Tutorial : MonoBehaviour
                         animationController.startWalking();
                         //moves bot forward by speed
                         float walkSpeed = 1f;
-                        botRB.velocity = botAndGun.transform.right * walkSpeed;
+                        //change velocity if not yet
+                        if (botRB.velocity != new Vector3(0, 0, 0))
+                        {
+                            botRB.velocity = botAndGun.transform.right * walkSpeed;
+                        }
+
                     }
                     botRB.velocity = new Vector3(0, 0, 0);
                     animationController.stopWalking();
                     curTime = 0f;
 
+                    Debug.Log(curTime);
+                    Debug.Log(timeShooting);
+                    lastShot = 0f;
                     while (curTime < timeShooting)
                     {
                         Debug.Log("started shooting");
@@ -134,7 +142,7 @@ public class Tutorial : MonoBehaviour
                         //shoot that dude
                         lastShot += Time.deltaTime;
                         //shoot every second
-                        if (lastShot >= 0.5f)
+                        if (lastShot >= 1f)
                         {
                             lastShot = 0f;
                             wbg.Shoot();
