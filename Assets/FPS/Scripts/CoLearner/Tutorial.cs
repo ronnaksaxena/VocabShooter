@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.FPS.Game;
 using UnityEngine;
 
 public class Tutorial : MonoBehaviour
@@ -16,8 +17,17 @@ public class Tutorial : MonoBehaviour
     private animationController animationController;
     public GameObject botGun;
     private WordBotGun wbg;
-    private float lastShot = 0f;
     private Rigidbody botRB;
+
+    //flags for animation
+    private float lastShot = 0f;
+    private float curTimeWalking = 0f;
+    private float timeWalking = 2f; //how long I want him to walk for
+    private bool doneWalking = false; //flag to check if finished walk animation
+
+    private float curTimeShooting = 0f;
+    private float timeShooting = 2f; //how long I want him to shoot for
+    private bool doneShooting = false;
 
     //enemies
     public GameObject enemy0;
@@ -90,7 +100,6 @@ public class Tutorial : MonoBehaviour
             
 
             //turn wordBot towards the other enemy
-            Debug.Log("tried to rotate!");
             float speed = 100f;
 
             RaycastHit hit;
@@ -108,48 +117,62 @@ public class Tutorial : MonoBehaviour
                     curPlaying = 3;
 
                     //walk and shoot enemy
-                    float curTime = 0f;
-                    float timeWalking = 2f;
-                    float timeShooting = 2f;
-
-                    Debug.Log(curTime);
-                    Debug.Log(timeWalking);
-                    while (curTime < timeWalking)
+                    
+                    Debug.Log("Cur Time walking is:" + curTimeWalking);
+                    if (curTimeWalking < timeWalking) //still walking
                     {
                         Debug.Log("Started Walking");
-                        curTime += Time.deltaTime;
-                        animationController.startWalking();
+                        curTimeWalking += Time.deltaTime;
+
                         //moves bot forward by speed
                         float walkSpeed = 1f;
                         //change velocity if not yet
-                        if (botRB.velocity != new Vector3(0, 0, 0))
+                        if (!animationController.isWalking)
                         {
+                            animationController.startWalking();
                             botRB.velocity = botAndGun.transform.right * walkSpeed;
                         }
 
                     }
-                    botRB.velocity = new Vector3(0, 0, 0);
-                    animationController.stopWalking();
-                    curTime = 0f;
+                    else //finished walking
+                    {
+                        botRB.velocity = new Vector3(0, 0, 0);
+                        animationController.stopWalking();
+                        doneWalking = true;
+                        Debug.Log("finished walking");
+                    }
 
-                    Debug.Log(curTime);
-                    Debug.Log(timeShooting);
-                    lastShot = 0f;
-                    while (curTime < timeShooting)
+
+                    if ((curTimeShooting < timeShooting) && doneWalking && !doneShooting) //only shoots after he walks
                     {
                         Debug.Log("started shooting");
-                        curTime += Time.deltaTime;
+                        curTimeShooting += Time.deltaTime;
                         //shoot that dude
                         lastShot += Time.deltaTime;
                         //shoot every second
                         if (lastShot >= 1f)
                         {
                             lastShot = 0f;
-                            wbg.Shoot();
+                            //wbg.Shoot(); //sneaky sneaky
+                            Health health = hit.transform.GetComponent<Health>();
+                            if (health != null)
+                            {
+                                health.TakeDamage(50, wordBot);
+                                Debug.Log("getting bopped");
+                            }
+                            else
+                            {
+                                Debug.Log("health not found");
+                            }
 
                         }
                     }
-                    Debug.Log("finished walk and shoot");
+                    else // finished shooting
+                    {
+                        doneShooting = true;
+                        Debug.Log("finished walk and shoot");
+                    }
+                    
 
 
                 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class animationController : MonoBehaviour
 {
     Animator animator;
+    public bool isWalking = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +23,11 @@ public class animationController : MonoBehaviour
     public void startWalking()
     {
         animator.SetBool("isWalking", true);
+        isWalking = true;
     }
     public void stopWalking()
     {
         animator.SetBool("isWalking", false);
+        isWalking = false;
     }
 }

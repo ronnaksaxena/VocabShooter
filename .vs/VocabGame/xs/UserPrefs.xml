@@ -1,23 +1,23 @@
 ﻿<Properties StartupConfiguration="{F43E31F3-237A-B022-0CA0-158EE7876670}|">
   <MonoDevelop.Ide.ItemProperties.fps.AI PreferredExecutionTarget="8041762c-82a7-4e31-9bce-48f3fed8a7ee" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FPS/Scripts/AI/EnemyController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FPS/Scripts/CoLearner/WordBotGun.cs">
     <Files>
+      <File FileName="Assets/FPS/Scripts/CoLearner/Tutorial.cs" Line="1" Column="1" />
       <File FileName="Assets/FPS/Scripts/CoLearner/WordBotGun.cs" Line="34" Column="12" />
-      <File FileName="Assets/FPS/Scripts/Game/Shared/Health.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/Gameplay/PlayerCharacterController.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/Gameplay/Managers/PlayerWeaponsManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/Game/Shared/Damageable.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/AI/DetectionModule.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/Gameplay/Managers/PlayerInputHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/Game/GameConstants.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/Gameplay/Objectives/ObjectiveKillEnemies.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/AI/EnemyMobile.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/AI/gameLogic.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/CoLearner/DialogueManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/CoLearner/DialogueTrigger.cs" Line="25" Column="1" />
-      <File FileName="Assets/animationController.cs" Line="25" Column="12" />
-      <File FileName="Assets/FPS/Scripts/CoLearner/Tutorial.cs" Line="139" Column="28" />
-      <File FileName="Assets/FPS/Scripts/AI/EnemyController.cs" Line="246" Column="17" />
+      <File FileName="Assets/FPS/Scripts/Game/Shared/Health.cs" />
+      <File FileName="Assets/FPS/Scripts/Gameplay/PlayerCharacterController.cs" />
+      <File FileName="Assets/FPS/Scripts/Gameplay/Managers/PlayerWeaponsManager.cs" />
+      <File FileName="Assets/FPS/Scripts/Game/Shared/Damageable.cs" />
+      <File FileName="Assets/FPS/Scripts/AI/DetectionModule.cs" />
+      <File FileName="Assets/FPS/Scripts/Gameplay/Managers/PlayerInputHandler.cs" />
+      <File FileName="Assets/FPS/Scripts/Game/GameConstants.cs" />
+      <File FileName="Assets/FPS/Scripts/Gameplay/Objectives/ObjectiveKillEnemies.cs" />
+      <File FileName="Assets/FPS/Scripts/AI/EnemyMobile.cs" />
+      <File FileName="Assets/FPS/Scripts/AI/gameLogic.cs" />
+      <File FileName="Assets/FPS/Scripts/CoLearner/DialogueManager.cs" />
+      <File FileName="Assets/FPS/Scripts/CoLearner/DialogueTrigger.cs" />
+      <File FileName="Assets/animationController.cs" />
+      <File FileName="Assets/FPS/Scripts/AI/EnemyController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,10 +26,10 @@
             <Node name="Assets" expanded="True">
               <Node name="FPS" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="AI" expanded="True">
-                    <Node name="EnemyController.cs" selected="True" />
+                  <Node name="AI" expanded="True" />
+                  <Node name="CoLearner" expanded="True">
+                    <Node name="Tutorial.cs" selected="True" />
                   </Node>
-                  <Node name="CoLearner" expanded="True" />
                   <Node name="Game" expanded="True">
                     <Node name="Managers" expanded="True" />
                     <Node name="Shared" expanded="True" />
@@ -50,7 +50,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="74553c96-a344-4d27-a8ba-40c7a8d12fc7" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="be527caa-bc89-4116-b10a-9e157b89759c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
