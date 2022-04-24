@@ -154,16 +154,20 @@ public class Tutorial : MonoBehaviour
                         {
                             lastShot = 0f;
                             //wbg.Shoot(); //sneaky sneaky
-                            Health health = enemy00.GetComponent<Health>();
-                            if (health != null)
+                            if (enemy00 != null) //is enemy still alive?
                             {
-                                health.TakeDamage(50, wordBot);
-                                Debug.Log("getting bopped");
+                                Health health = enemy00.GetComponent<Health>();
+                                if (health != null)
+                                {
+                                    health.TakeDamage(50, wordBot);
+                                    Debug.Log("getting bopped");
+                                }
+                                else
+                                {
+                                    Debug.Log("not getting bopped :(");
+                                }
                             }
-                            else
-                            {
-                                Debug.Log("not getting bopped :(");
-                            }
+                            
 
                         }
                     }
