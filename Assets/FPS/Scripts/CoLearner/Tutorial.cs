@@ -134,7 +134,7 @@ public class Tutorial : MonoBehaviour
                         }
 
                     }
-                    else //finished walking
+                    else if ((curTimeWalking >= timeWalking) && !doneWalking) //finished walking
                     {
                         botRB.velocity = new Vector3(0, 0, 0);
                         animationController.stopWalking();
@@ -143,7 +143,7 @@ public class Tutorial : MonoBehaviour
                     }
 
 
-                    if ((curTimeShooting < timeShooting) && doneWalking && !doneShooting) //only shoots after he walks
+                    else if ((curTimeShooting < timeShooting) && doneWalking && !doneShooting) //only shoots after he walks
                     {
                         Debug.Log("started shooting");
                         curTimeShooting += Time.deltaTime;
@@ -154,7 +154,7 @@ public class Tutorial : MonoBehaviour
                         {
                             lastShot = 0f;
                             //wbg.Shoot(); //sneaky sneaky
-                            Health health = hit.transform.GetComponent<Health>();
+                            Health health = enemy00.GetComponent<Health>();
                             if (health != null)
                             {
                                 health.TakeDamage(50, wordBot);
@@ -162,7 +162,7 @@ public class Tutorial : MonoBehaviour
                             }
                             else
                             {
-                                Debug.Log("health not found");
+                                Debug.Log("not getting bopped :(");
                             }
 
                         }
