@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1440
     height: 777
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Console
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 392}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 342}
   m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
-  controlID: 38
+  controlID: 149
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 342}
   m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 39
+  controlID: 18
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 100
+  controlID: 19
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -303,10 +303,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 345.5
+    x: 201
     y: 83
-    width: 815.5
-    height: 435
+    width: 961
+    height: 406
   m_ViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
@@ -363,10 +363,11 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 74ced98fce89d964faa34aea8fe92762,
+  m_AnimatorController: {fileID: 9100000, guid: 90b51c24f603b45a880262ff76cf472d,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 110700000, guid: 74ced98fce89d964faa34aea8fe92762, type: 2}
+  - m_Target: {fileID: 8211314155149484058, guid: 90b51c24f603b45a880262ff76cf472d,
+      type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -470,22 +471,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/FPS/Scripts/AI
+    - Assets/Character/Animations
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/FPS/Scripts/AI
+  - Assets/Character/Animations
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/ronnaksaxena/Desktop/Coding/VocabGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 171.9997}
-    m_SelectedIDs: 86940000
-    m_LastClickedID: 38022
-    m_ExpandedIDs: 000000004a9400004c9400004e9400007a94000000ca9a3b
+    m_SelectedIDs: 26b30200
+    m_LastClickedID: 176934
+    m_ExpandedIDs: 000000004c9400004e9400005094000000b302000cb3020000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -513,7 +514,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004a9400004c9400004e940000
+    m_ExpandedIDs: 000000004c9400004e94000050940000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -538,8 +539,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: fa130000
-    m_LastClickedInstanceID: 5114
+    m_SelectedInstanceIDs: 44440000
+    m_LastClickedInstanceID: 17476
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000092230100
     m_RenameOverlay:
@@ -635,10 +636,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 260}
-      m_SelectedIDs: fa130000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 787affffae7affff68fbffffb4430000e8430000b04400000645000050450000
+      scrollPos: {x: 0, y: 335}
+      m_SelectedIDs: 44440000
+      m_LastClickedID: 17476
+      m_ExpandedIDs: 7c7affffb27affff6cfbffffaa430000b4430000ea43000008450000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -699,9 +700,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -76.20415, y: 1.1687152, z: 61.669533}
+    m_Target: {x: -76.84554, y: 1.1712449, z: 61.527348}
     speed: 2
-    m_Value: {x: -76.20415, y: 1.1687152, z: 61.669533}
+    m_Value: {x: -76.84554, y: 1.1712449, z: 61.527348}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -752,9 +753,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.19924957, y: -0.4050536, z: 0.09093749, w: -0.887672}
   m_Size:
-    m_Target: 2.4848802
+    m_Target: 1.1198559
     speed: 2
-    m_Value: 2.4848802
+    m_Value: 1.1198559
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -772,7 +773,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.06704605, y: -0.67921436, z: 0.062536165, w: -0.7282226}
+  m_LastSceneViewRotation: {x: -0.19925436, y: -0.40506333, z: 0.09093968, w: -0.8876934}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 

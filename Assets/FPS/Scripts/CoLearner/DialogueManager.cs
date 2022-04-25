@@ -55,4 +55,9 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public bool isDialogueOver()
+    {
+        return dialogueTrigger.isScriptOver();
+    }
+
 }
