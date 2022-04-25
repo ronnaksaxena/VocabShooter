@@ -68,7 +68,6 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
-    <Compile Include="Assets/gameLogic2.cs" />
     <Compile Include="Assets/FPS/Scripts/CoLearner/animationController.cs" />
     <Compile Include="Assets/FPS/Scripts/quiz/AnswerScript.cs" />
     <Compile Include="Assets/FPS/Scripts/CoLearner/DialogueTrigger.cs" />
@@ -101,7 +100,6 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" />
     <Compile Include="Assets/FPS/Scripts/CoLearner/followPlayer2.cs" />
-    <Compile Include="Assets/gameLogic3.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />

@@ -285,7 +285,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 32623320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb9a3d2e480c4f0f8169bbcc8508734, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a6d79dda61904876adf9da12b7e7cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemy1: {fileID: 949435521}
@@ -9329,7 +9329,7 @@ PrefabInstance:
     - target: {fileID: 1315839542190839936, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
       propertyPath: WinSceneName
-      value: Scene2
+      value: level3
       objectReference: {fileID: 0}
     - target: {fileID: 1315839542190839937, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
