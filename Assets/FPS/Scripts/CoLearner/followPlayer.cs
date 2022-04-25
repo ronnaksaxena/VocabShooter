@@ -8,6 +8,7 @@ public class followPlayer : MonoBehaviour
     public GameObject player;
     public GameObject tutorialObject;
     public GameObject botAndGun;
+    private Rigidbody botRB;
 
     //scripts to load
     private animationController animationController;
@@ -19,12 +20,14 @@ public class followPlayer : MonoBehaviour
     public float FollowSpeed;
     public RaycastHit Shot;
     private bool isWalking = false;
+    private float walkSpeed = 1f;
 
 
     private void Start()
     {
         tutorial = tutorialObject.GetComponent<Tutorial>();
         animationController = GetComponent<animationController>();
+        botRB = botAndGun.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -50,20 +53,24 @@ public class followPlayer : MonoBehaviour
                     {
                         isWalking = true;
                         animationController.startWalking();
+                        
+                    }
+                    botAndGun.transform.position = Vector3.MoveTowards(botAndGun.transform.position, player.transform.position, FollowSpeed);
+                    //stop him from going into floor
+                    botAndGun.transform.position = new Vector3(botAndGun.transform.position.x, 1.3f, botAndGun.transform.position.z);
+                }
+                else
+                {
+                    Debug.Log("stopped walking");
+                    if (isWalking) //stops repititve calls
+                    {
+                        isWalking = false;
+                        animationController.stopWalking();
                     }
 
-                    botAndGun.transform.position = Vector3.MoveTowards(botAndGun.transform.position, player.transform.position, FollowSpeed);
                 }
             }
-            else
-            {
-                if (isWalking) //stops repititve calls
-                {
-                    isWalking = false;
-                    animationController.stopWalking();
-                }
-
-            }
+            
 
 
 

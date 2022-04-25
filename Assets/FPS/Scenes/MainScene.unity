@@ -2360,8 +2360,8 @@ MonoBehaviour:
   player: {fileID: 2729281214152228921}
   tutorialObject: {fileID: 1583906041}
   botAndGun: {fileID: 113558109}
-  AllowedDistance: 5
-  FollowSpeed: 0.01
+  AllowedDistance: 3
+  FollowSpeed: 0.1
 --- !u!1001 &816852358
 PrefabInstance:
   m_ObjectHideFlags: 0
