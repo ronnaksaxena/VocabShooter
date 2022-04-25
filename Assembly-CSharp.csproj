@@ -100,6 +100,9 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/FPS/Scripts/quiz/QuestionAnswers.cs" />
     <Compile Include="Assets/FPS/Scripts/CoLearner/followPlayer.cs" />
+    <Compile Include="Assets/FPS/Scripts/CoLearner/tutorial2.cs" />
+    <Compile Include="Assets/followPlayer2.cs" />
+    <Compile Include="Assets/gameLogic2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" />

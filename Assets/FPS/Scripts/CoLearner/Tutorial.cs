@@ -246,13 +246,15 @@ public class Tutorial : MonoBehaviour
                     }
                     else //looking at player so tutotial is done
                     {
-                        Debug.Log("finished script");
-                        isTutorialDone = true;
 
                     }
 
 
                 }
+            }
+            else if (curScript == 6)
+            {
+                isTutorialDone = true;
             }
 
         }

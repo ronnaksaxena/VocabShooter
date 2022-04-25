@@ -33,6 +33,7 @@ public class DialogueManager : MonoBehaviour
     {
         //update current sentence it is at
         curIdx = dialogueTrigger.curIdx;
+        Debug.Log(curIdx);
 
         //goes to next setnece if enough time passed
         timePassed += Time.deltaTime;
@@ -50,6 +51,7 @@ public class DialogueManager : MonoBehaviour
                 continueLabel.enabled = false;
                 script.enabled = false;
                 background.SetActive(false);
+                curIdx = dialogueTrigger.dialogue.Length; //to set flag when message dissapears
             }
             
         }

@@ -2360,7 +2360,7 @@ MonoBehaviour:
   player: {fileID: 2729281214152228921}
   tutorialObject: {fileID: 1583906041}
   botAndGun: {fileID: 113558109}
-  AllowedDistance: 3
+  AllowedDistance: 5
   FollowSpeed: 0.1
 --- !u!1001 &816852358
 PrefabInstance:
@@ -9759,7 +9759,7 @@ PrefabInstance:
     - target: {fileID: 1315839542190839936, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
       propertyPath: WinSceneName
-      value: Scene2
+      value: level2
       objectReference: {fileID: 0}
     - target: {fileID: 1315839542190839937, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
