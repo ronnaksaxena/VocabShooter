@@ -27,7 +27,8 @@ public class WordBotGun : MonoBehaviour
         {
             Shoot();
         }
-        
+
+
     }
 
     //shooting method
