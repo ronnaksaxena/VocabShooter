@@ -1,22 +1,21 @@
 ﻿<Properties StartupConfiguration="{F43E31F3-237A-B022-0CA0-158EE7876670}|">
   <MonoDevelop.Ide.ItemProperties.fps.AI PreferredExecutionTarget="8041762c-82a7-4e31-9bce-48f3fed8a7ee" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FPS/Scripts/CoLearner/tutorial2.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FPS/Scripts/CoLearner/followPlayer.cs">
     <Files>
       <File FileName="Assets/FPS/Scripts/CoLearner/Tutorial.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/CoLearner/WordBotGun.cs" Line="29" Column="10" />
-      <File FileName="Assets/FPS/Scripts/Game/Shared/Health.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/AI/gameLogic.cs" Line="103" Column="1" />
-      <File FileName="Assets/FPS/Scripts/CoLearner/DialogueManager.cs" Line="36" Column="45" />
-      <File FileName="Assets/FPS/Scripts/CoLearner/DialogueTrigger.cs" Line="28" Column="9" />
-      <File FileName="Assets/animationController.cs" Line="9" Column="1" />
-      <File FileName="Assets/FPS/Scripts/AI/EnemyController.cs" Line="246" Column="19" />
+      <File FileName="Assets/FPS/Scripts/CoLearner/WordBotGun.cs" />
+      <File FileName="Assets/FPS/Scripts/Game/Shared/Health.cs" />
+      <File FileName="Assets/FPS/Scripts/AI/gameLogic.cs" />
+      <File FileName="Assets/FPS/Scripts/CoLearner/DialogueManager.cs" />
+      <File FileName="Assets/FPS/Scripts/CoLearner/DialogueTrigger.cs" />
+      <File FileName="Assets/FPS/Scripts/AI/EnemyController.cs" />
       <File FileName="Assets/FPS/Scripts/CoLearner/followPlayer.cs" Line="81" Column="2" />
-      <File FileName="Assets/FPS/Scripts/quiz/AnswerScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/quiz/QuestionAnswers.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/quiz/QuizManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/tutorial2.cs" Line="58" Column="14" />
-      <File FileName="Assets/followPlayer2.cs" Line="15" Column="22" />
-      <File FileName="Assets/gameLogic2.cs" Line="36" Column="69" />
+      <File FileName="Assets/FPS/Scripts/quiz/AnswerScript.cs" />
+      <File FileName="Assets/FPS/Scripts/quiz/QuestionAnswers.cs" />
+      <File FileName="Assets/FPS/Scripts/quiz/QuizManager.cs" />
+      <File FileName="Assets/followPlayer2.cs" Line="5" Column="1" />
+      <File FileName="Assets/gameLogic2.cs" />
+      <File FileName="Assets/FPS/Scripts/CoLearner/followPlayer3.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -27,7 +26,7 @@
                 <Node name="Scripts" expanded="True">
                   <Node name="AI" expanded="True" />
                   <Node name="CoLearner" expanded="True">
-                    <Node name="tutorial2.cs" selected="True" />
+                    <Node name="followPlayer.cs" selected="True" />
                   </Node>
                   <Node name="Game" expanded="True">
                     <Node name="Managers" expanded="True" />
@@ -49,7 +48,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cd87e38a-72ff-4b46-951f-ce8ba95462ff" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="46aff0d8-42f4-4a3e-8d6d-81af4cb92fb5" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

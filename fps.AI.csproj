@@ -59,6 +59,7 @@
     <Compile Include="Assets/FPS/Scripts/AI/NavigationModule.cs" />
     <Compile Include="Assets/FPS/Scripts/AI/EnemyManager.cs" />
     <Compile Include="Assets/FPS/Scripts/AI/FollowPlayer.cs" />
+    <Compile Include="Assets/FPS/Scripts/AI/gameLogic2.cs" />
     <Compile Include="Assets/FPS/Scripts/AI/EnemyTurret.cs" />
     <Compile Include="Assets/FPS/Scripts/AI/EnemyMobile.cs" />
     <Compile Include="Assets/FPS/Scripts/AI/gameLogic.cs" />

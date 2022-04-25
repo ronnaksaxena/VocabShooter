@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
     <Compile Include="Assets/FPS/Scripts/CoLearner/Dialogue.cs" />
+    <Compile Include="Assets/FPS/Scripts/CoLearner/tutorial3.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" />
@@ -67,19 +68,23 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshSpawner.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
+    <Compile Include="Assets/gameLogic2.cs" />
     <Compile Include="Assets/FPS/Scripts/CoLearner/animationController.cs" />
     <Compile Include="Assets/FPS/Scripts/quiz/AnswerScript.cs" />
     <Compile Include="Assets/FPS/Scripts/CoLearner/DialogueTrigger.cs" />
     <Compile Include="Assets/FPS/Scripts/quiz/QuizManager.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeA.cs" />
+    <Compile Include="Assets/FPS/Scripts/CoLearner/followPlayer.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark04.cs" />
+    <Compile Include="Assets/FPS/Scripts/CoLearner/tutorial2.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ChatController.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventHandler.cs" />
     <Compile Include="Assets/FPS/Scripts/CoLearner/DialogueManager.cs" />
+    <Compile Include="Assets/FPS/Scripts/CoLearner/followPlayer3.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexShakeB.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
     <Compile Include="Assets/FPS/Scripts/CoLearner/WordBotGun.cs" />
@@ -95,14 +100,12 @@
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextConsoleSimulator.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ObjectSpin.cs" />
+    <Compile Include="Assets/FPS/Scripts/CoLearner/followPlayer2.cs" />
+    <Compile Include="Assets/gameLogic3.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" />
     <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextEventCheck.cs" />
     <Compile Include="Assets/FPS/Scripts/quiz/QuestionAnswers.cs" />
-    <Compile Include="Assets/FPS/Scripts/CoLearner/followPlayer.cs" />
-    <Compile Include="Assets/FPS/Scripts/CoLearner/tutorial2.cs" />
-    <Compile Include="Assets/followPlayer2.cs" />
-    <Compile Include="Assets/gameLogic2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" />
