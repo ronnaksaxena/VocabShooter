@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{F43E31F3-237A-B022-0CA0-158EE7876670}|">
   <MonoDevelop.Ide.ItemProperties.fps.AI PreferredExecutionTarget="8041762c-82a7-4e31-9bce-48f3fed8a7ee" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/FPS/Scripts/AI/gameLogic2.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/gameLogic3.cs">
     <Files>
       <File FileName="Assets/FPS/Scripts/CoLearner/Tutorial.cs" Line="1" Column="1" />
       <File FileName="Assets/FPS/Scripts/CoLearner/WordBotGun.cs" />
@@ -16,7 +16,8 @@
       <File FileName="Assets/followPlayer2.cs" Line="28" Column="17" />
       <File FileName="Assets/gameLogic2.cs" />
       <File FileName="Assets/FPS/Scripts/CoLearner/followPlayer3.cs" Line="1" Column="1" />
-      <File FileName="Assets/FPS/Scripts/AI/gameLogic2.cs" Line="1" Column="1" />
+      <File FileName="Assets/FPS/Scripts/AI/gameLogic2.cs" Line="20" Column="32" />
+      <File FileName="Assets/gameLogic3.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,9 +26,7 @@
             <Node name="Assets" expanded="True">
               <Node name="FPS" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="AI" expanded="True">
-                    <Node name="gameLogic2.cs" selected="True" />
-                  </Node>
+                  <Node name="AI" expanded="True" />
                   <Node name="CoLearner" expanded="True" />
                   <Node name="Game" expanded="True">
                     <Node name="Managers" expanded="True" />
@@ -41,6 +40,7 @@
                   <Node name="UI" expanded="True" />
                 </Node>
               </Node>
+              <Node name="gameLogic3.cs" selected="True" />
             </Node>
           </Node>
         </State>

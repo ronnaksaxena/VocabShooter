@@ -249,6 +249,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 32623321}
+  - component: {fileID: 32623322}
   m_Layer: 0
   m_Name: enemies
   m_TagString: Untagged
@@ -275,6 +276,27 @@ Transform:
   m_Father: {fileID: 2729281214382627287}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &32623322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32623320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01a9a5edf7c344935969c7eb8ab9b28f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy1: {fileID: 949435521}
+  enemy2: {fileID: 769723754}
+  enemy3: {fileID: 681367398}
+  Boss: {fileID: 1241647254}
+  e1Text: {fileID: 1863050004}
+  e2Text: {fileID: 1353384482}
+  e3Text: {fileID: 1566405692}
+  BossText: {fileID: 2070718344}
+  GameManager: {fileID: 4008933581619590513}
 --- !u!1 &64982354
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,9 +351,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - Wow "Massive" Performance!
-  - This time you have to shoot the bots that mean small. Be careful they are a lot
-    stronger now!
+  - Guess a "little" hardwork goes a long way.
+  - The final wave is here! Think "fast" this time!
   curIdx: 0
   curText: 
 --- !u!114 &64982358
@@ -3594,6 +3615,12 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 3b8192bf5ef4d4ca8b584156a7f77598, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e29d43f43cc5d82499dd9926e01847d3, type: 3}
+--- !u!1 &1241647254 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2015434656898269652, guid: e29d43f43cc5d82499dd9926e01847d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1241647253}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1264605148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2141676431450117668, guid: cd17687759887a0438ee021e51abc9d9,
@@ -9176,12 +9203,12 @@ PrefabInstance:
     - target: {fileID: 598277302063295019, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
       propertyPath: Title
-      value: No More Small Talk!
+      value: Think Fast!
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295019, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
       propertyPath: Description
-      value: Shoot the words that mean small!
+      value: Shoot the words that mean fast!
       objectReference: {fileID: 0}
     - target: {fileID: 598277302063295019, guid: 012d63212fd1fe646b661cb8446c7bd4,
         type: 3}
@@ -9295,7 +9322,7 @@ PrefabInstance:
     - target: {fileID: 1315839542190839936, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
       propertyPath: WinSceneName
-      value: Scene2
+      value: Quiz
       objectReference: {fileID: 0}
     - target: {fileID: 1315839542190839937, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
@@ -9464,6 +9491,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c996b53e9f849234393d1e90f68d1679, type: 3}
+--- !u!1 &4008933581619590513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1315839542190839943, guid: c996b53e9f849234393d1e90f68d1679,
+    type: 3}
+  m_PrefabInstance: {fileID: 4008933581619590512}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9217268748774167426
 PrefabInstance:
   m_ObjectHideFlags: 0

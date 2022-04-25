@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/FPS/Scenes/level3.unity
     guid: 5c45828b5658b4560be9ce90405f6f3d
+  - enabled: 1
+    path: Assets/FPS/Scenes/Quiz.unity
+    guid: 477adfe95115743b5914d59a31289ae0
   m_configObjects: {}
