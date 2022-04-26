@@ -1260,9 +1260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a0e83c7dfcbb4e989e3c589c9e85da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  question: 
-  answers: []
-  correctAnswer: 0
 --- !u!114 &1357538803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1297,6 +1294,55 @@ MonoBehaviour:
     - Swift
     - Rapid
     correctAnswer: 1
+  - question: 4. Which word means small?
+    answers:
+    - Miniature
+    - Supersonic
+    - Massive
+    - Colossal
+    correctAnswer: 0
+  - question: 5. Which word means small?
+    answers:
+    - Agile
+    - Diminutive
+    - Nimble
+    - Massive
+    correctAnswer: 1
+  - question: 6. Which word means small?
+    answers:
+    - Swift
+    - Gargantuan
+    - Minuscule
+    - Immense
+    correctAnswer: 2
+  - question: 7. Which word means fast?
+    answers:
+    - Supersonic
+    - Massive
+    - Brief
+    - Colossal
+    correctAnswer: 0
+  - question: 8. Which word means fast?
+    answers:
+    - Immense
+    - Diminutive
+    - Nimble
+    - Petite
+    correctAnswer: 2
+  - question: 9. Which word means fast?
+    answers:
+    - Vast
+    - Agile
+    - Miniature
+    - Gargantuan
+    correctAnswer: 1
+  - question: 10. Which word means fast?
+    answers:
+    - Rapid
+    - Massive
+    - Immense
+    - Brief
+    correctAnswer: 0
   options:
   - {fileID: 1062126779}
   - {fileID: 1320889117}
