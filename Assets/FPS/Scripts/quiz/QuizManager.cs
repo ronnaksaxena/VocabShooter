@@ -12,7 +12,7 @@ public class QuizManager : MonoBehaviour
 
     public Text questionText;
     public Text correctText;
-    private bool isQuizOver = false;
+    public bool isQuizOver = false;
 
     private void Start()
     {

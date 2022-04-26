@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AnswerScript : MonoBehaviour
 {
@@ -9,7 +10,11 @@ public class AnswerScript : MonoBehaviour
 
     public void Answer()
     {
-        if (isCorrect)
+        if (quizManager.isQuizOver)
+        {
+            playAgain();
+        }
+        else if (isCorrect)
         {
             Debug.Log("correct!"); //change to increment score
             quizManager.correct();
@@ -19,5 +24,10 @@ public class AnswerScript : MonoBehaviour
             Debug.Log("wrong!");
             quizManager.incorrect();
         }
+    }
+
+    void playAgain()
+    {
+        SceneManager.LoadScene("MainScene");
     }
 }
