@@ -12,16 +12,30 @@ public class QuizManager : MonoBehaviour
 
     public Text questionText;
     public Text correctText;
+    private bool isQuizOver = false;
 
     private void Start()
     {
         generateQuestion();
 
     }
+    private void Update()
+    {
+        if (isQuizOver)
+        {
+            correctText.text = "";
+            questionText.text = $"You Scored: {numCorrect}/10";
+            options[0].transform.GetChild(0).GetComponent<Text>().text = "You";
+            options[1].transform.GetChild(0).GetComponent<Text>().text = "Win!";
+            options[2].transform.GetChild(0).GetComponent<Text>().text = "Play Again?";
+            options[3].transform.GetChild(0).GetComponent<Text>().text = "";
+        }
+    }
 
     public void correct()
     {
-        numCorrect += 1;
+        if (!isQuizOver)
+            numCorrect += 1; //only updates if quiz still going on
         generateQuestion();
     }
 
@@ -60,6 +74,7 @@ public class QuizManager : MonoBehaviour
         }
         else
         {
+            isQuizOver = true;
             Debug.Log("reached end of quiz");
             //advance to next scene
         }
